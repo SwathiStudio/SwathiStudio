@@ -1,0 +1,181 @@
+body {
+margin: 0;
+padding: 0;
+font-family: Arial, sans-serif;
+}
+
+.sidebar {
+height: 100%;
+width: 200px;
+background-color: #333;
+color: #fff;
+float: left;
+position: fixed;
+padding: 20px;
+}
+
+.main-content {
+margin-left: 200px;
+padding: 20px;
+}
+
+.sidebar ul {
+list-style-type: none;
+margin: 0;
+padding: 0;
+}
+
+.sidebar li {
+padding: 15px;
+}
+
+.sidebar li:hover {
+background-color: #ddd;
+cursor: pointer;
+}
+
+.sidebar-header {
+font-size: 22px;
+padding-left: 20px;
+}
+
+.selected {
+background-color: #ddd;
+}
+
+.main-content {
+margin-left: 200px;
+padding: 50px;
+}
+
+
+table {
+width: 100%;
+border-collapse: collapse;
+}
+
+th, td {
+border: 1px solid #ddd;
+padding: 8px;
+text-align: left;
+}
+
+th {
+background-color: #ddd;
+}
+
+button {
+background-color: green;
+color: white;
+padding: 8px 16px;
+border: none;
+cursor: pointer;
+}
+
+button.deny {
+background-color: red;
+}
+
+
+
+form {
+padding: 20px;
+}
+
+form div {
+margin-bottom: 20px;
+}
+
+label {
+font-weight: bold;
+}
+
+input[type="text"], input[type="password"] {
+padding: 10px;
+width: 50%;
+font-size: 16px;
+border-radius: 5px;
+border: 1px solid gray;
+}
+
+button[type="submit"] {
+background-color: blue;
+color: white;
+padding: 10px 20px;
+border-radius: 5px;
+border: none;
+cursor: pointer;
+}
+
+
+/* -----------------------------------------------add video---------------------------------------------------- */
+
+/* Set some basic styles for the form */
+#video-upload-form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+}
+
+/* Style the form labels */
+#video-upload-form label {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+#video-upload-form span {
+  font-weight: bold;
+  margin-bottom: 20px;
+  font-size: 20px;
+}
+/* Style the text input */
+#video-upload-form input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* Style the select dropdown */
+#video-upload-form select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #fff;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%23838d9b"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/></svg>');
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+}
+
+/* Style the file input */
+#video-upload-form input[type="file"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #fff;
+}
+
+/* Style the submit button */
+#video-upload-form button[type="submit"] {
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#video-upload-form button[type="submit"]:hover {
+  background-color: #3e8e41;
+}

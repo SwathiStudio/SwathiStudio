@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Swathi Studio</title>
+    <link rel="stylesheet" href="choreg.css">
+</head>
+
+<body>
+    <div class="header">
+
+        <form>
+            <h2>Register Yourself</h2>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required><br>
+          
+            <label for="dance_styles">Dance Style:</label>
+            <select id="dance_styles" name="dance_styles">
+              <option value="">Select a style</option>
+              <option value="hiphop">Hip Hop</option>
+              <option value="jazz">Jazz</option> 
+              <option value="ballet">Ballet</option>
+              <option value="tap">Tap</option>
+            </select><br>
+          
+            <label for="gender">Gender:</label>
+            <input type="radio" id="male" name="gender" value="male" required>
+            <label for="male">Male</label>
+            <input type="radio" id="female" name="gender" value="female" required>
+            <label for="female">Female</label>
+            <input type="radio" id="other" name="gender" value="other" required>
+            <label for="other">Other</label><br>
+          
+            <label for="age">Age:</label>
+            <input type="number" id="age" name="age" min="18" max="100" required><br>
+          
+            <label for="experience">Experience:</label>
+            <input type="text" id="experience" name="experience" required><br>
+          
+            <label for="file">Upload a file:</label>
+            <input type="file" id="file" name="file" accept=".jpg,.jpeg,.png" required><br>
+            
+            <input type="submit" value="Submit">
+        </form>
+          
+</body>
+</html>    

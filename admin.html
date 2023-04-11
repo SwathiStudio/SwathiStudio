@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="admin.css">
+  <style>
+
+
+  </style>
+
+</head>
+
+<body>
+  <div class="sidebar">
+    <ul>
+      <li id="instructor-requests">Instructor Requests</li>
+      <li id="add-video">Add Video</li>
+      <li id="add-admin">Add Admin</li>
+      <li id="logout">Logout</li>
+    </ul>
+  </div>
+  <div class="main-content">
+    <div id="instructor-requests-screen" class="screen">
+      <table>
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Dance Style</th>
+            <th>Certifications</th>
+            <th>Phone</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody id="requests">
+          <!-- Requests will be inserted here dynamically -->
+        </tbody>
+      </table>
+    </div>
+    <div id="addVideo-screen" class="screen">
+      <form id="video-upload-form">
+        <span>Upload Video</span>
+
+        <label for="dance_style_category">Dance Style Category:</label>
+        <select id="dance_style_category" name="dance_style_category">
+          <option value="ballet">Ballet</option>
+          <option value="bharatnatyam">Bharatnatyam</option>
+          <option value="salsa">Salsa</option>
+          <option value="popping">Popping</option>
+          <option value="kathak">Kathak</option>
+          <option value="kpop">Kpop</option>
+          <option value="kuchipudi">kuchipudi</option>
+          <option value="litefeet">Litefeet</option>
+          <option value="locking">Locking</option>
+          <option value="jazz">Jazz</option>
+          <option value="contemporary">Contemporary</option>
+          <option value="workout">Workout</option>
+        </select><br>
+
+        <label for="video_upload">Video Upload:</label>
+        <input type="file" id="video_upload" name="video_upload"><br>
+
+        <button type="submit">Upload Video</button>
+        <br><progress id="upload-progress" value="0" max="100"></progress>
+      </form>
+    </div>
+    <div id="add-admin-screen" class="screen">
+      <form id="admin-form">
+        <div>
+          <label for="admin-id">Admin ID:</label>
+          <input type="text" id="admin-id" name="admin-id">
+        </div>
+        <div>
+          <label for="admin-password">Password:</label>
+          <input type="password" id="admin-password" name="admin-password">
+        </div>
+        <div>
+          <button type="submit">Add Admin</button>
+        </div>
+      </form>
+    </div>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/7.14.1-0/firebase.js"></script>
+  <script src="admin.js" type="module"></script>
+</body>
+
+
+
+
+</html>

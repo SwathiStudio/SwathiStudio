@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login</title>
+    <script src="https://kit.fontawesome.com/624f082ca2.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="login.css">
+</head>
+
+<body>
+    <!-- <form>
+        <div class="logform">
+            <label>Email:</label>
+            <input type="email" id="log_email" placeholder="Enter your email">
+            <br>
+            <label>Password:</label>
+            <input type="password" id="log_password" placeholder="Enter your password">
+            <br>
+            <button type="button" id="login-button">Log In</button>
+        </div>
+    </form>
+     -->
+
+    <form>
+        <div class="logform">
+            <div class="icon">
+                <i class="fa-solid fa-user" aria-hidden="true"></i>
+            </div>
+            <div class="input-container">
+                <label>Email:</label>
+                <input type="email" id="log_email" placeholder="Enter your email">
+            </div>
+            <div class="input-container">
+                <label>Password:</label>
+                <input type="password" id="log_password" placeholder="Enter your password">
+            </div>
+            <button type="button" id="login-button">Log In</button>
+        </div>
+    </form>
+
+
+
+
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/7.14.1-0/firebase.js"></script>
+<script type="module">
+
+    const firebaseConfig = {
+        apiKey: "AIzaSyDYcm-wrAizrEATgRVbpBe-O42mPo7RE7A",
+        authDomain: "swathistudio-fe630.firebaseapp.com",
+        databaseURL: "https://swathistudio-fe630-default-rtdb.firebaseio.com",
+        projectId: "swathistudio-fe630",
+        storageBucket: "swathistudio-fe630.appspot.com",
+        messagingSenderId: "637418483680",
+        appId: "1:637418483680:web:56652925fd208b7f218585"
+    };
+
+    firebase.initializeApp(firebaseConfig);
+
+    var session = false;
+
+    // Get the email and password elements from the HTML
+    var email = document.getElementById("log_email");
+    var password = document.getElementById("log_password");
+
+
+    // Add a login event listener to the login button
+    document.getElementById("login-button").addEventListener("click", function () {
+        // Get the email and password values
+        var emailValue = email.value;
+        var passwordValue = password.value;
+
+
+
+        // Sign in with email and password
+        firebase.auth().signInWithEmailAndPassword(emailValue, passwordValue)
+            .then(function (user) {
+                // User is signed in
+                alert("Logged in ", user.email);
+                window.location.href = "index.html";
+            })
+            .catch(function (error) {
+                // Handle errors
+                console.log("Error: ", error.message);
+            });
+
+    });
+
+
+</script>
+
+</html>

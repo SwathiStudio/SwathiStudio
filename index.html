@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Swathi Studio</title>
+  <link rel="stylesheet" href="home.css">
+  <link rel="stylesheet" href="home-dancestyles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300&display=swap" rel="stylesheet">
+  <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script> -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+    integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+
+<body>
+
+  <!-- Add a loader element to your HTML -->
+  <div id="loader">
+    <div class="loader"></div>
+  </div>
+
+  <!-- Your other HTML code here -->
+
+  <div class="header">
+
+    <div class="navbar">
+      <img src="https://pbs.twimg.com/media/FkHG5_4UAAEOVa_?format=png&name=small" alt="Logo" class="logo">
+      <a href="myvids.html">My Videos</a>
+
+
+      <form id="upload-form">
+        <input type="file" id="video-input">
+        <button type="submit">Upload Video</button>
+      </form>
+
+      <ul>
+
+        <li><input type="text" placeholder="Search instructor" id="search-bar"></li>
+        <li><button id="search-button">Search</button></li>
+
+
+      </ul>
+      <button id="logout-button">Logout</button>
+
+    </div>
+
+    <div id="search-popup">
+      <div class="popup-container">
+        <h2>Search Reults</h2>
+        <ul id="search-results"></ul>
+      </div>
+
+    </div>
+
+
+
+
+
+
+    <div class="headings">
+      <div class="lefthead">
+        <h1> ONLINE DANCE CLASS</h1>
+        <p class="subhead1">Learn from best dancer in the world at the comfort of your own home</p><br>
+      </div>
+      <div class="righthead">
+        <img src="https://pbs.twimg.com/media/FgHB1pgaUAAq-u7?format=png&name=small" class="girlimg">
+      </div>
+
+
+
+    </div>
+
+  </div>
+
+  <div class="dancestyles">
+    <p class="dslogo">DANCE STYLES</p>
+    <div class="stylebox-container">
+      <a href="">
+        <div class="dstyle1 stylebox"></div>
+        <p>Ballet</p>
+      </a>
+      <a href="#">
+        <div class="dstyle2 stylebox"></div>
+        <p>Bharatnatyam</p>
+      </a>
+      <a href="#">
+        <div class="dstyle3 stylebox"></div>
+        <p>Salsa</p>
+      </a>
+      <a href="#">
+        <div class="dstyle4 stylebox"></div>
+        <p>Popping</p>
+      </a>
+      <a href="#">
+        <div class="dstyle5 stylebox"></div>
+        <p>Kathak</p>
+      </a>
+      <a href="#">
+        <div class="dstyle6 stylebox"></div>
+        <p>Kpop</p>
+      </a>
+      <a href="#">
+        <div class="dstyle7 stylebox"></div>
+        <p>kuchipudi</p>
+      </a>
+      <a href="#">
+        <div class="dstyle8 stylebox"></div>
+        <p>Litefeet</p>
+      </a>
+      <a href="#">
+        <div class="dstyle9 stylebox"></div>
+        <p>Locking</p>
+      </a>
+      <a href="#">
+        <div class="dstyle10 stylebox"></div>
+        <p>Jazz</p>
+      </a>
+      <a href="">
+        <div class="dstyle11 stylebox"></div>
+        <p>Contemporary</p>
+      </a>
+      <a href="#">
+        <div class="dstyle12 stylebox"></div>
+        <p>Workout</p>
+      </a>
+    </div>
+
+    <!-- HTML markup for popup -->
+    <div class="popup">
+      <div class="popup-content">
+        <span class="close">&times;</span>
+        <div class="videos"></div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Admin Login popup -->
+  <div id="admin-login-popup" style="display:none;">
+
+    <form id="admin_login_form">
+      <span id="close-admin-login-popup"
+        style="position:absolute;top:5px;right:10px;cursor:pointer;font-size:20px;">&times;</span>
+      <label for="admin-id">ID:</label>
+      <input type="text" id="admin-id" name="admin-id">
+      <br>
+      <label for="admin-password">Password:</label>
+      <input type="password" id="admin-password" name="admin-password">
+      <br>
+      <input type="submit" value="Login">
+    </form>
+  </div>
+
+
+
+  <footer>
+    <div class="footer-container">
+      <div class="social-icons">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+      </div>
+      <div class="links">
+        <a href="#">About Us</a> |
+        <a href="#" id="admin_login">Admin Login</a> |
+        <a id="instructor-link">Become an Instructor</a>
+      </div>
+    </div>
+  </footer>
+  <!-- <button id="upload-video-button" style="display: none;">Upload Video</button> -->
+
+
+  <!-- ----------------------------------------------------------------------------------------------------------->
+
+  <div id="instructor-popup">
+    <form class="instructor-form">
+      <h3>Become a Dance Instructor</h3>
+      <div class="form-group">
+        <label for="name">Name:</label>
+        <input type="text" id="name" required>
+      </div>
+      <div class="form-group">
+        <label for="phone">Phone:</label>
+        <input type="tel" id="phone" required>
+      </div>
+      <div class="form-group">
+        <label for="dance-style">Preferred Dance Style:</label>
+        <select id="dance-style" required>
+          <option value="" disabled selected>Select a Style</option>
+          <option value="Ballet">Ballet</option>
+          <option value="Bharatnatyam">Bharatnatyam</option>
+          <option value="salsa">Salsa</option>
+          <option value="Popping">Popping</option>
+          <option value="Kathak">Kathak</option>
+          <option value="Kpop">Kpop</option>
+          <option value="kuchipudi">kuchipudi</option>
+          <option value="Litefeet">Litefeet</option>
+          <option value="Locking">Locking</option>
+          <option value="Jazz">Jazz</option>
+          <option value="Contemporary">Contemporary</option>
+          <option value="Workout">Workout</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="certifications">Certifications:</label>
+        <input type="text" id="certifications" required>
+      </div>
+      <div class="form-group">
+        <input type="submit" value="Submit">
+        <input id="instructor-close-btn" type="button" value="Close"></button>
+      </div>
+    </form>
+  </div>
+
+
+
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/7.14.1-0/firebase.js"></script>
+  <script src="vidupld.js"></script>
+  <script src="home.js" type="module"></script>
+  <!-- <script src="https://www.gstatic.com/firebasejs/7.14.1-0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.1-0/firebase-database.js"></script> -->
+  <script>
+    // var inst_link = document.getElementById("instructor-link");
+    $(document).ready(function () {
+      $("#instructor-link").click(function () {
+        $("#instructor-popup").show();
+      });
+
+      $("#instructor-close-btn").click(function () {
+        $("#instructor-popup").hide();
+      });
+    });
+  </script>
+</body>
+
+</html>

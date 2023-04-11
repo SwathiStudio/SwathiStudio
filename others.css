@@ -1,0 +1,49 @@
+.video-section {
+margin: 20px 0;
+}
+
+#video-list {
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+margin-top: 20px;
+}
+
+#video-list video {
+margin: 10px;
+border: 1px solid #ddd;
+box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+max-width: 300px;
+max-height: 225px;
+background-color: #000;
+}
+
+#video-list video:hover {
+box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+cursor: pointer;
+}
+
+  
+
+button {
+color: white;
+border: none;
+padding: 8px 16px;
+border-radius: 4px;
+cursor: pointer;
+}
+
+button:hover {
+background-color: #0b7dda;
+}
+
+#show-videos-button {
+margin-right: 10px;
+background: #4e89ae;
+}
+
+#logout-button {
+margin-top: 20px;
+background: #ed6663;
+}
+
